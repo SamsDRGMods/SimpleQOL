@@ -586,7 +586,7 @@ protected:
     UPROPERTY(BlueprintReadWrite)
     bool CanDash;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DashInputWindow;
     
     UPROPERTY(EditAnywhere)
@@ -601,7 +601,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     float DashCooldown;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UStatusEffect> DashStatusEffect;
     
     UPROPERTY(Transient)
