@@ -29,10 +29,10 @@
 /wd4244
 /wd4838
 /I .
-/I D:\DRGmodding\Github\SimpleKeybinds\FSD\Plugins\Nvidia\FSDAnsel\Source\FSDAnsel\Private
-/I D:\DRGmodding\Github\SimpleKeybinds\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Inc\FSDAnsel
-/I D:\DRGmodding\Github\SimpleKeybinds\FSD\Plugins\Nvidia\FSDAnsel\Source
-/I D:\DRGmodding\Github\SimpleKeybinds\FSD\Plugins\Nvidia\FSDAnsel\Source\FSDAnsel\Public
+/I D:\DRGmodding\Github\SimpleQOL\FSD\Plugins\Nvidia\FSDAnsel\Source\FSDAnsel\Private
+/I D:\DRGmodding\Github\SimpleQOL\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Inc\FSDAnsel
+/I D:\DRGmodding\Github\SimpleQOL\FSD\Plugins\Nvidia\FSDAnsel\Source
+/I D:\DRGmodding\Github\SimpleQOL\FSD\Plugins\Nvidia\FSDAnsel\Source\FSDAnsel\Public
 /I Runtime
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
@@ -260,12 +260,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"D:\DRGmodding\Github\SimpleKeybinds\FSD\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"D:\DRGmodding\Github\SimpleKeybinds\FSD\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"D:\DRGmodding\Github\SimpleKeybinds\FSD\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\DRGmodding\Github\SimpleKeybinds\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Module.FSDAnsel.gen.cpp"
-/FI"D:\DRGmodding\Github\SimpleKeybinds\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Definitions.FSDAnsel.h"
-/Fo"D:\DRGmodding\Github\SimpleKeybinds\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Module.FSDAnsel.gen.cpp.obj"
+/FI"D:\DRGmodding\Github\SimpleQOL\FSD\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"D:\DRGmodding\Github\SimpleQOL\FSD\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"D:\DRGmodding\Github\SimpleQOL\FSD\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"D:\DRGmodding\Github\SimpleQOL\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Module.FSDAnsel.gen.cpp"
+/FI"D:\DRGmodding\Github\SimpleQOL\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Definitions.FSDAnsel.h"
+/Fo"D:\DRGmodding\Github\SimpleQOL\FSD\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Module.FSDAnsel.gen.cpp.obj"
 /TP
 /GR-
 /W4
