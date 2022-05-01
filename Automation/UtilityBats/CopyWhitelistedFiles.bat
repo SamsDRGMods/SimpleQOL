@@ -1,34 +1,15 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-::Set active directory to the dir the bat is in
+rem Set active directory to main automation dir 
 pushd %~dp0
-
-call VerifyVars.bat noPause
-
-::Find variables in config.ini
-for /f "tokens=1,2 delims==" %%g in (Config.ini) do (
-	::Variables modname and ProjectFile need to be treated differently, all other variables in Config.ini are paths
-	if %%g==ModName (
-		set ModName=%%h
-	) else if %%g==ProjectFile (
-		::Resolve to path w/ drive letter
-		set ProjectFolder=%%~dph
-		::Resolve to file name w/ extension
-		set ProjectFile=%%~nxh
-        ::Resolve to file name only
-        set ProjectName=%%~nh
-	) else (
-		::Resolve qualified path name
-		set %%g=%%~fh
-	)
-)
+cd ..
 
 echo resettings PackageInput folder
 rmdir Temp\PackageInput /s /q
 mkdir Temp\PackageInput\Content
 
-for /F "tokens=*" %%g in (PakWhiteList.ini) do (
+for /F "tokens=*" %%g in (Configs/PakWhiteList.ini) do (
     if exist "%ProjectFolder%\Saved\Cooked\WindowsNoEditor\%ProjectName%\Content\%%g\" (
         echo copying folder %%g
         robocopy "%ProjectFolder%\Saved\Cooked\WindowsNoEditor\%ProjectName%\Content\%%g" "Temp\PackageInput\Content\%%g" /MIR /ns /nc /nfl /ndl /np /njh /njs
