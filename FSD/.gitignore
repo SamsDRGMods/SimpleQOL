@@ -80,3 +80,24 @@ Plugins/Nvidia/FSDAnsel/Binaries/**
 # Get that other Nvidia stuff outa here; don't need compiled files can do that later
 Plugins/Nvidia/DLSS/Intermediate/**
 Plugins/Nvidia/DLSS/Binaries/**
+
+# Game content folders
+Content/AI/**
+Content/Art/**
+Content/Audio/**
+Content/Character/**
+Content/CharacterStructure/**
+Content/Collections/**
+Content/Critters/**
+Content/Developers/**
+Content/Enemies/**
+Content/Game/**
+Content/GameElements/**
+Content/Landscape/**
+Content/LevelElements/**
+Content/Maps/**
+Content/Movies/**
+Content/Particles/**
+Content/PersonalFolders/**
+Content/UI/**
+Content/WeaponsNTools/**
