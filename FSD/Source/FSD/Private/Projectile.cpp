@@ -5,9 +5,9 @@
 
 class UObject;
 class AProjectileBase;
-class AProjectile;
 class APawn;
 class USceneComponent;
+class AProjectile;
 class UFSDPhysicalMaterial;
 
 AProjectileBase* AProjectile::SpawnProjectileFromSelf(UObject* WorldContextObject, TSubclassOf<AProjectileBase> ProjectileClass, FVector Origin, FRotator velocityDirection) {

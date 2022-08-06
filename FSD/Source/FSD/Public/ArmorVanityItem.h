@@ -6,11 +6,11 @@
 
 class UAnimInstance;
 class USkeletalMesh;
-class UMaterialInterface;
 class UArmorMaterialVanityItem;
+class UMaterialInterface;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UArmorVanityItem : public UVanityItem {
     GENERATED_BODY()
 public:

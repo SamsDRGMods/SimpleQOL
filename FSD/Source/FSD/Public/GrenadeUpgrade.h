@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "EGrenadeUpgradeType.h"
 #include "UpgradeValues.h"
+#include "EGrenadeUpgradeType.h"
 #include "GrenadeUpgrade.generated.h"
 
 class AGrenade;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UGrenadeUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

@@ -4,12 +4,12 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "DamageSubsystem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UDamageSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FDamageSubsystemItem> Items;
     
 public:

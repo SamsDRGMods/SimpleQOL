@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandInterval.h"
-#include "SavableDataAsset.h"
 #include "ESchematicType.h"
+#include "SavableDataAsset.h"
+#include "RandInterval.h"
 #include "DeepDiveTemplateItem.h"
 #include "DeepDiveTemplate.generated.h"
 
 class UDifficultySetting;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UDeepDiveTemplate : public USavableDataAsset {
     GENERATED_BODY()
 public:

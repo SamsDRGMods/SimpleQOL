@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
 #include "SavableDataAsset.generated.h"
 
 class UBuildRestriction;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USavableDataAsset : public UDataAsset, public ISaveGameIDInterface {
     GENERATED_BODY()
 public:

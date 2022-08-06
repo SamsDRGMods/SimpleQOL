@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "RichTextParseResult.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "FSDRichTextFunctionlibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDRichTextFunctionlibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepPathFinderType.h"
 #include "DeepPathFinderPreference.h"
+#include "DeepPathFinderType.h"
 #include "DeepPathFinderSize.h"
 #include "CablePathSettings.generated.h"
 

@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "EMicrowaveGunUpgrade.h"
 #include "UpgradeValues.h"
+#include "EMicrowaveGunUpgrade.h"
 #include "MicrowavegunUpgrade.generated.h"
 
 class AItem;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UMicrowavegunUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

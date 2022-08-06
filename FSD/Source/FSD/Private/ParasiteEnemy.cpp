@@ -1,7 +1,7 @@
 #include "ParasiteEnemy.h"
 #include "Components/StaticMeshComponent.h"
-#include "Components/SceneComponent.h"
 #include "OutlineComponent.h"
+#include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 
 class UHealthComponentBase;

@@ -1,58 +1,58 @@
 #include "PlayerCharacter.h"
 #include "Net/UnrealNetwork.h"
-#include "StatusEffectsComponent.h"
-#include "CharacterSightComponent.h"
-#include "InventoryComponent.h"
-#include "Components/SceneComponent.h"
-#include "PlayerAfflictionComponent.h"
-#include "CharacterVanityComponent.h"
-#include "CommunicationComponent.h"
-#include "PawnStatsComponent.h"
-#include "OutlineComponent.h"
-#include "PlayerTemperatureComponent.h"
-#include "PlayerHealthComponent.h"
-#include "CharacterUseComponent.h"
-#include "CharacterRecoilComponent.h"
-#include "PlayerReactiveTerrainTrackerComponent.h"
-#include "Components/WidgetInteractionComponent.h"
+#include "PlayerAttackPositionComponent.h"
+#include "SingleUsableComponent.h"
 #include "FirstPersonSkeletalMeshComponent.h"
+#include "PlayerAfflictionComponent.h"
+#include "OutlineComponent.h"
+#include "Components/SceneComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "CharacterSightComponent.h"
+#include "Components/WidgetInteractionComponent.h"
+#include "CharacterRecoilComponent.h"
+#include "PawnStatsComponent.h"
+#include "InstantUsable.h"
+#include "PlayerTemperatureComponent.h"
+#include "CharacterUseComponent.h"
+#include "CommunicationComponent.h"
+#include "PlayerInfoComponent.h"
+#include "CharacterVanityComponent.h"
 #include "Camera/CameraComponent.h"
 #include "ActorTrackingComponent.h"
+#include "InventoryComponent.h"
 #include "MissionStatsCollector.h"
-#include "CharacterCameraController.h"
-#include "GameFramework/SpringArmComponent.h"
 #include "Components/PointLightComponent.h"
-#include "SingleUsableComponent.h"
-#include "PlayerInfoComponent.h"
-#include "PlayerAttackPositionComponent.h"
-#include "InstantUsable.h"
+#include "CharacterCameraController.h"
+#include "PlayerHealthComponent.h"
+#include "PlayerReactiveTerrainTrackerComponent.h"
+#include "StatusEffectsComponent.h"
 
-class UPlayerTPAnimInstance;
-class AFSDPlayerController;
-class AZipLineProjectile;
-class UPerkHUDActivationWidget;
 class USoundBase;
-class UAudioComponent;
-class USoundAttenuation;
-class USoundConcurrency;
-class AFSDPlayerState;
-class APlayerController;
-class UMaterialInstanceDynamic;
-class AShieldGeneratorActor;
-class UFSDPhysicalMaterial;
-class UCharacterStateComponent;
-class USchematic;
-class UAnimMontage;
-class UParticleSystem;
-class AEventRewardDispenser;
+class AFSDPlayerController;
 class APlayerCharacter;
-class AFSDPhysicsActor;
-class UCappedResource;
-class AActor;
+class AZipLineProjectile;
+class USoundAttenuation;
 class AItem;
-class UInventoryList;
-class UObject;
 class UTexture2D;
+class UPerkHUDActivationWidget;
+class APlayerController;
+class USoundConcurrency;
+class UObject;
+class UAudioComponent;
+class UMaterialInstanceDynamic;
+class UCharacterStateComponent;
+class AShieldGeneratorActor;
+class UParticleSystem;
+class UFSDPhysicalMaterial;
+class UAnimMontage;
+class AEventRewardDispenser;
+class USchematic;
+class AFSDPhysicsActor;
+class AFSDPlayerState;
+class UPlayerTPAnimInstance;
+class AActor;
+class UCappedResource;
+class UInventoryList;
 class UPlayerFPAnimInstance;
 class UPlayerAnimInstance;
 
@@ -117,6 +117,9 @@ void APlayerCharacter::SetOutsideShieldGenerator(AShieldGeneratorActor* Shield) 
 }
 
 void APlayerCharacter::SetIsCharacterSelectionModel() {
+}
+
+void APlayerCharacter::SetInstantUsables_Implementation(bool Value) {
 }
 
 void APlayerCharacter::SetInsideShieldGenerator(AShieldGeneratorActor* Shield) {
@@ -186,6 +189,9 @@ void APlayerCharacter::Server_CheatGodMode_Implementation() {
 }
 
 void APlayerCharacter::Server_CheatFlyMode_Implementation(bool Active) {
+}
+
+void APlayerCharacter::Server_CheatDebugFastMode_Implementation(bool fast) {
 }
 
 void APlayerCharacter::Server_CancelThrowingCarriable_Implementation() {
@@ -647,8 +653,6 @@ APlayerCharacter::APlayerCharacter() {
     this->IdleTime = 0.00f;
     this->FPDrinkSalute = NULL;
     this->TPDrinkSalute = NULL;
-    this->SaluteShout = NULL;
-    this->DrinkShout = NULL;
     this->CurrentSaluteMontage = NULL;
     this->BlockTrackGrindOnLanded = false;
     this->RadarMaterialInstance = NULL;

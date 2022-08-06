@@ -1,11 +1,11 @@
 #include "DamageFunctionLibrary.h"
 
 class UDamageTag;
-class UPawnStatsComponent;
 class UObject;
+class UPawnStatsComponent;
+class UDamageImpulse;
 class UDamageClass;
 class AActor;
-class UDamageImpulse;
 class USkeletalMeshComponent;
 class ULimbDismembermentList;
 

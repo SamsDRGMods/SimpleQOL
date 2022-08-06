@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FSDPhysicsActor.h"
-#include "SaveGameIDInterface.h"
 #include "ItemIDInterface.h"
-#include "LoadoutItem.h"
+#include "FSDPhysicsActor.h"
 #include "UpgradableGear.h"
+#include "SaveGameIDInterface.h"
+#include "LoadoutItem.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Flare.generated.h"
 
-class AItem;
 class AActor;
+class AItem;
 class UItemID;
 class USoundCue;
 class AFlare;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AFlare : public AFSDPhysicsActor, public ISaveGameIDInterface, public IItemIDInterface, public ILoadoutItem, public IUpgradableGear {
     GENERATED_BODY()
 public:
@@ -43,10 +43,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor ChromaColor;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_IsFlareOn, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsFlareOn, meta=(AllowPrivateAccess=true))
     bool IsFlareOn;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* DamageCauser;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

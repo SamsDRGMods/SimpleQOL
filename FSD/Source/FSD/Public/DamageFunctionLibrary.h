@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "DamageFunctionLibrary.generated.h"
 
-class UObject;
 class UDamageTag;
+class UObject;
 class UPawnStatsComponent;
 class UDamageClass;
 class AActor;
@@ -14,7 +14,7 @@ class UDamageImpulse;
 class USkeletalMeshComponent;
 class ULimbDismembermentList;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UDamageFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

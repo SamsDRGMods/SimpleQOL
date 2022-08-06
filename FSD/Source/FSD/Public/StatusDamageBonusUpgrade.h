@@ -5,12 +5,12 @@
 #include "UpgradeValues.h"
 #include "StatusDamageBonusUpgrade.generated.h"
 
+class AActor;
 class UStatusEffect;
 class UDamageClass;
-class AActor;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UStatusDamageBonusUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:

@@ -3,16 +3,16 @@
 #include "Blueprint/UserWidget.h"
 #include "OptionalObjectiveWidget.generated.h"
 
-class UOptionalObjectiveWidget;
 class UObjective;
+class UOptionalObjectiveWidget;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UOptionalObjectiveWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOptionalObjectiveWidgetDelegate, UOptionalObjectiveWidget*, InOptionalObjectiveWidget);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOptionalObjectiveWidgetDelegate OnWidgetUpdated;
     
     UOptionalObjectiveWidget();

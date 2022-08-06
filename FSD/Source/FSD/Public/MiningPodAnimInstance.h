@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
-#include "EMiningPodRampState.h"
 #include "EMiningPodState.h"
+#include "EMiningPodRampState.h"
 #include "MiningPodAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UMiningPodAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EUpgradeClass.h"
 #include "SavableDataAsset.h"
-#include "RefundableInterface.h"
 #include "EUpgradeTiers.h"
 #include "ItemUpgradeStatText.h"
+#include "RefundableInterface.h"
+#include "EUpgradeClass.h"
 #include "CraftingCost.h"
 #include "UpgradeValues.h"
 #include "ItemUpgrade.generated.h"
@@ -14,22 +14,22 @@ class UResourceData;
 class UItemUpgrade;
 class UItemUpgradeCategory;
 class UItemUpgradeElement;
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UItemUpgrade : public USavableDataAsset, public IRefundableInterface {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FItemUpgradeSignature, UItemUpgrade*, Upgrade);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FItemUpgradeSignature OnCrafted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FItemUpgradeSignature OnEquipped;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FItemUpgradeSignature OnUnequipped;
     
 protected:
@@ -54,7 +54,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UItemUpgradeCategory* Category;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UResourceData*, float> UpgradeCraftingCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

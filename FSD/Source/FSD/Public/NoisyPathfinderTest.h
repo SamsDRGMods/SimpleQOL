@@ -6,11 +6,11 @@
 #include "NoisyPathfinderTest.generated.h"
 
 class UTunnelSegmentSetting;
-class ADeepCSGWorld;
 class UTunnelParameters;
 class UFloodFillSettings;
+class ADeepCSGWorld;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ANoisyPathfinderTest : public AActor {
     GENERATED_BODY()
 public:

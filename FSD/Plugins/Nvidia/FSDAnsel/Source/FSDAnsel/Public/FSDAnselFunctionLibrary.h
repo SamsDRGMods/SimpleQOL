@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EUIControlEffectTarget.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "EUIControlEffectTarget.h"
 #include "UObject/NoExportTypes.h"
 #include "FSDAnselFunctionLibrary.generated.h"
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDAnselFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

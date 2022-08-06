@@ -4,9 +4,9 @@
 #include "MotionAudioController.h"
 #include "ProjectileLauncherComponent.h"
 
+class UHealthComponentBase;
 class AActor;
 class UFSDPhysicalMaterial;
-class UHealthComponentBase;
 class UPrimitiveComponent;
 
 void AFlameThrowerItem::TriggerAoEHeat() {

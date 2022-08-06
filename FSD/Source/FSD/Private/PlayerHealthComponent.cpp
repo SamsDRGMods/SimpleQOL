@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class UStatusEffect;
 class AActor;
+class UStatusEffect;
 class AController;
 
 UStatusEffect* UPlayerHealthComponent::SetIronWillStatusEffect(TSubclassOf<UStatusEffect> steClass) {

@@ -1,9 +1,9 @@
 #include "DrinkableDataAsset.h"
 
-class UTexture2D;
 class UObject;
-class APlayerCharacter;
 class APlayerController;
+class APlayerCharacter;
+class UTexture2D;
 class UDrinkableDataAsset;
 
 bool UDrinkableDataAsset::TryUnlockSpecialDrinks(UObject* WorldContext) {

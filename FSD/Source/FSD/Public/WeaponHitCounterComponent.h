@@ -9,7 +9,7 @@ class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 class AActor;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWeaponHitCounterComponent : public UActorComponent {
     GENERATED_BODY()
 public:

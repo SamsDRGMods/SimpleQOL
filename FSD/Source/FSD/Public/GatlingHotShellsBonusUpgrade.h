@@ -9,7 +9,7 @@ class UDamageClass;
 class AActor;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UGatlingHotShellsBonusUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:

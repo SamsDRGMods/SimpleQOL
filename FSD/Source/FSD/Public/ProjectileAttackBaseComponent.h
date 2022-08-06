@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AttackBaseComponent.h"
-#include "ProjectileAttackDelegateDelegate.h"
-#include "EProjectileAttackRotationType.h"
 #include "ProjetileSpawnedDelegateDelegate.h"
+#include "AttackBaseComponent.h"
+#include "EProjectileAttackRotationType.h"
+#include "ProjectileAttackDelegateDelegate.h"
 #include "ProjectileAttackBaseComponent.generated.h"
 
 class UAnimMontage;
 class UProjectileAttack;
 class AActor;
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileAttackBaseComponent : public UAttackBaseComponent {
     GENERATED_BODY()
 public:
@@ -24,22 +24,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SocketName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EProjectileAttackRotationType RotationHandling;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ProjectilesIgnoreEachOther;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FProjectileAttackDelegate OnAttackStartedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FProjectileAttackDelegate OnProjectileFiredEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FProjectileAttackDelegate OnAttackEndedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FProjetileSpawnedDelegate OnProjectileSpawnedEvent;
     
 public:

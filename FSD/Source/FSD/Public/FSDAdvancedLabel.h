@@ -8,11 +8,11 @@
 #include "FSDAdvancedLabel.generated.h"
 
 class UTextBlock;
-class UTexture2D;
 class UImage;
+class UTexture2D;
 class UHorizontalBox;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UFSDAdvancedLabel : public UUserWidget {
     GENERATED_BODY()
 public:

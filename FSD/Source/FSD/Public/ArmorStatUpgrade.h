@@ -9,7 +9,7 @@ class UPawnStat;
 class AFSDPlayerState;
 class AActor;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UArmorStatUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

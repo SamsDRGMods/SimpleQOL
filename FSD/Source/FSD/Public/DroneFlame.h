@@ -4,19 +4,19 @@
 #include "GameFramework/Actor.h"
 #include "DroneFlame.generated.h"
 
+class UStatusEffect;
 class UParticleSystemComponent;
 class UDamageComponent;
-class UStatusEffect;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ADroneFlame : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* FlameParticles;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UDamageComponent* Damage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

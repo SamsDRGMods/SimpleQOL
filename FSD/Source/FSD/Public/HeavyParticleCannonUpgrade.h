@@ -6,10 +6,10 @@
 #include "UpgradeValues.h"
 #include "HeavyParticleCannonUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UHeavyParticleCannonUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

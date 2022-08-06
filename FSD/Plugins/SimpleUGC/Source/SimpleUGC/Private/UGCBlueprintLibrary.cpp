@@ -1,7 +1,7 @@
 #include "UGCBlueprintLibrary.h"
 
-class UObject;
 class UUGCSettings;
+class UObject;
 class UUGCRegistry;
 class UUGCLatentActionManager;
 

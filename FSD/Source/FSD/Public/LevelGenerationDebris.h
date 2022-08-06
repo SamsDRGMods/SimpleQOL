@@ -3,10 +3,10 @@
 #include "Components/ActorComponent.h"
 #include "LevelGenerationDebris.generated.h"
 
-class UDebrisBase;
 class UObject;
+class UDebrisBase;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ULevelGenerationDebris : public UActorComponent {
     GENERATED_BODY()
 public:

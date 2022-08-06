@@ -5,17 +5,17 @@
 #include "CharacterShowroomController.generated.h"
 
 class APlayerCharacter;
-class UCharacterShowroomController;
-class UShowroomCameraKey;
 class UObject;
+class UShowroomCameraKey;
+class UCharacterShowroomController;
 class UPlayerCharacterID;
 
-UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterShowroomController : public UShowroomController {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     APlayerCharacter* CharacterInstance;
     
 public:

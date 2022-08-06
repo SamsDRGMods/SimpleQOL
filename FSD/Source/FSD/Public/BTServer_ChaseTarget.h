@@ -6,7 +6,7 @@
 #include "GameplayTagContainer.h"
 #include "BTServer_ChaseTarget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTServer_ChaseTarget : public UBTService {
     GENERATED_BODY()
 public:

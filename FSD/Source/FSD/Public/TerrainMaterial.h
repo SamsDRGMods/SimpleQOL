@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TerrainMaterialCore.h"
-#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
+#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
 #include "TerrainMaterial.generated.h"
 
-class UMaterialInstance;
 class UFXSystemAsset;
-class UDialogDataAsset;
+class UMaterialInstance;
 class UResourceData;
-class UTerrainType;
 class USoundCue;
+class UDialogDataAsset;
+class UTerrainType;
 class UFXSystemComponent;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UTerrainMaterial : public UTerrainMaterialCore {
     GENERATED_BODY()
 public:

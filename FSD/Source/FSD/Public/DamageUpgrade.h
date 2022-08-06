@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EDamageUpgrade.h"
 #include "StandardItemUpgrade.h"
+#include "EDamageUpgrade.h"
 #include "EDamageComponentType.h"
 #include "UpgradeValues.h"
 #include "DamageUpgrade.generated.h"
@@ -10,7 +10,7 @@
 class AActor;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDamageUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

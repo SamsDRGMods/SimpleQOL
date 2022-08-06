@@ -4,23 +4,23 @@
 #include "FSDSessionUpdater.h"
 #include "FSDSendToURL.h"
 
-class UTemporaryBuff;
-class UGeneratedMission;
-class AActor;
-class USoundBase;
 class AProceduralSetup;
-class UTexture2D;
+class AActor;
+class UGeneratedMission;
 class UObject;
 class UFSDSaveGame;
-class UHUDWarningWidget;
 class ACharacterSelectionSwitcher;
 class UWorld;
 class UNetDriver;
 class UMutator;
-class APlayerCharacter;
+class UTemporaryBuff;
 class AFSDPlayerController;
+class APlayerCharacter;
 class UIconGenerationManager;
+class UTexture2D;
 class UItemSkin;
+class UHUDWarningWidget;
+class USoundBase;
 
 void UFSDGameInstance::UpdateGlobelMissionSeed() {
 }
@@ -83,6 +83,9 @@ void UFSDGameInstance::SetIsUsingOnlineFeatures(bool bIsOnlineFeatureUsed) {
 }
 
 void UFSDGameInstance::SetHasSeenInfoScreen() {
+}
+
+void UFSDGameInstance::SetGlobalMissionSeed(int32 Seed) {
 }
 
 void UFSDGameInstance::SetFSDPassword(const FString& pw) {
@@ -276,6 +279,7 @@ void UFSDGameInstance::ChangeSkinPreview(UItemSkin* PreviewSkin) {
 
 void UFSDGameInstance::CancelJoin() {
 }
+
 
 UHUDWarningWidget* UFSDGameInstance::AddWarningToHUD(TSubclassOf<UHUDWarningWidget> WidgetClass, UTexture2D* Texture, USoundBase* PingSound) {
     return NULL;

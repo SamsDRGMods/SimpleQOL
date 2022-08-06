@@ -14,7 +14,7 @@ class UObjective;
 class UBiome;
 class UDebrisPositioning;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UProceduralFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

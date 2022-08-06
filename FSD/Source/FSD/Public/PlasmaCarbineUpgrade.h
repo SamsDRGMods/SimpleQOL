@@ -6,10 +6,10 @@
 #include "UpgradeValues.h"
 #include "PlasmaCarbineUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UPlasmaCarbineUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

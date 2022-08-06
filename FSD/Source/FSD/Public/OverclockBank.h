@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "SchematicBankInterface.h"
+#include "Engine/DataAsset.h"
 #include "OverclockBank.generated.h"
 
+class UOverclockUpgrade;
 class USchematic;
 class UItemID;
-class UOverclockUpgrade;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UOverclockBank : public UDataAsset, public ISchematicBankInterface {
     GENERATED_BODY()
 public:

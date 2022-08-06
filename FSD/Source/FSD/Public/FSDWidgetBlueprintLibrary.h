@@ -1,49 +1,49 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SizeBoxSettings.h"
-#include "WidgetAnimationSettings.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Widgets/Layout/Anchors.h"
+#include "InputCoreTypes.h"
 #include "Blueprint/UserWidget.h"
+#include "WidgetAnimationSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Engine/EngineTypes.h"
+#include "SizeBoxSettings.h"
 #include "Components/SlateWrapperTypes.h"
 #include "Fonts/SlateFontInfo.h"
-#include "InputCoreTypes.h"
-#include "Styling/SlateBrush.h"
 #include "Framework/Text/TextLayout.h"
 #include "Types/SlateEnums.h"
+#include "Styling/SlateBrush.h"
 #include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
-#include "Widgets/Layout/Anchors.h"
 #include "FSDWidgetBlueprintLibrary.generated.h"
 
-class UTexture2D;
 class UObject;
-class UWidget;
 class UUserWidget;
-class UWidgetAnimation;
-class UFSDCheatManager;
-class UCanvasPanel;
-class APlayerController;
 class AFSDPlayerState;
+class UWidget;
+class UWidgetAnimation;
 class USizeBox;
+class UVerticalBox;
 class UPanelWidget;
 class UTextBlock;
 class UImage;
 class UWindowWidget;
-class UUniformGridSlot;
-class UVerticalBox;
+class APlayerController;
+class UFSDCheatManager;
 class USpacer;
+class UTexture2D;
 class UHorizontalBox;
 class UHorizontalBoxSlot;
+class UUniformGridSlot;
 class UVerticalBoxSlot;
 class UUniformGridPanel;
+class UCanvasPanel;
 class UCanvasPanelSlot;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDWidgetBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

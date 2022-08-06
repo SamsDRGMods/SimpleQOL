@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleMeshWithCachedTreeComponent.h"
 #include "CSGSTLProperties.h"
+#include "SimpleMeshWithCachedTreeComponent.h"
 #include "CSGSTLComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGSTLComponent : public USimpleMeshWithCachedTreeComponent {
     GENERATED_BODY()
 public:

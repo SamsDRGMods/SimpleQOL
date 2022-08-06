@@ -8,11 +8,11 @@ class UMaterialInterface;
 class UDynamicIcon;
 class UArmorVanityItem;
 class UMaterialInstance;
-class UMaterialInstanceConstant;
 class UObject;
+class UMaterialInstanceConstant;
 class UArmorMaterialVanityItem;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UArmorMaterialVanityItem : public UVanityItem {
     GENERATED_BODY()
 public:

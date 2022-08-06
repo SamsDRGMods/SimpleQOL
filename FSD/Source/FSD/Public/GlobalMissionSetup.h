@@ -7,12 +7,12 @@
 #include "RequiredMissionItem.h"
 #include "GlobalMissionSetup.generated.h"
 
-class UMissionWarning;
 class UMissionNameBank;
 class UMissionMutator;
+class UMissionWarning;
 class UPlanetZone;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UGlobalMissionSetup : public UDataAsset {
     GENERATED_BODY()
 public:

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/WorldSubsystem.h"
 #include "MusicHandle.h"
+#include "Subsystems/WorldSubsystem.h"
 #include "ActiveAudioItem.h"
 #include "MusicManager.generated.h"
 
@@ -9,12 +9,12 @@ class UMusicLibrary;
 class UMusicCategory;
 class USoundBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMusicManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<FMusicHandle, FActiveAudioItem> ActiveAudio;
     
 public:

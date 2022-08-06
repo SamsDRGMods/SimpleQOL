@@ -9,7 +9,7 @@
 class USoundCue;
 class USkinEffect;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AMagazine : public AActor, public ISkinnable {
     GENERATED_BODY()
 public:

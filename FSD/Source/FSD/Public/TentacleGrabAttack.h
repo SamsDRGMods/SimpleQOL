@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AttackBaseComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "AttackBaseComponent.h"
 #include "TentacleGrabAttack.generated.h"
 
 class UMeshComponent;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTentacleGrabAttack : public UAttackBaseComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UMeshComponent* HeadMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

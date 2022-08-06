@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SphereComponent.h"
 
-class UTerrainMaterial;
 class UDamageComponent;
+class UTerrainMaterial;
 class UPrimitiveComponent;
 class AProjectileBase;
 class AActor;

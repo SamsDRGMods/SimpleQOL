@@ -4,11 +4,11 @@
 #include "Components/SceneComponent.h"
 #include "Components/CapsuleComponent.h"
 
+class AGuntowerModule;
 class UHealthComponentBase;
 class AFSDPlayerState;
 class UPrimitiveComponent;
 class AActor;
-class AGuntowerModule;
 
 void AGuntowerActivationPlatform::ShutDown() {
 }

@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "DebrisBase.h"
-#include "EDebrisCarvedType.h"
 #include "ECarveFilterType.h"
-#include "UDebrisCarveMesh.h"
 #include "DebrisInfluence.h"
+#include "EDebrisCarvedType.h"
+#include "UDebrisCarveMesh.h"
 #include "CarveOptionsCellSize.h"
 #include "DebrisCarved.generated.h"
 
 class UTerrainMaterial;
 class AActor;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDebrisCarved : public UDebrisBase {
     GENERATED_BODY()
 public:

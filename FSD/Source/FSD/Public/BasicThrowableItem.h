@@ -1,42 +1,42 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CarriableItem.h"
-#include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "BasicThrowableItem.generated.h"
 
-class UStaticMeshComponent;
 class UInstantUsable;
+class UFirstPersonStaticMeshComponent;
 class UBoxComponent;
 class USoundCue;
-class UCarriableComponent;
 class USphereComponent;
-class UFirstPersonStaticMeshComponent;
+class UStaticMeshComponent;
 class APlayerCharacter;
+class UCarriableComponent;
 class UPrimitiveComponent;
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ABasicThrowableItem : public ACarriableItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxComponent* BoxComp;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* UseSphere;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCarriableComponent* CarriableComp;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UInstantUsable* UsableComp;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* WorldMeshComp;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UFirstPersonStaticMeshComponent* ViewMeshComp;
     
 protected:

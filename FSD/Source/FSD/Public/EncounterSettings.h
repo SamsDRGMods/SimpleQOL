@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "EncounterRareCritterItem.h"
-#include "EliteEnemyEntry.h"
 #include "IRandRange.h"
-#include "RandInterval.h"
+#include "EncounterRareCritterItem.h"
 #include "EncounterSpecialItem.h"
 #include "RandRange.h"
+#include "RandInterval.h"
 #include "GameplayTagContainer.h"
+#include "EliteEnemyEntry.h"
 #include "EncounterSettings.generated.h"
 
-class UEnemyDescriptor;
 class UCritterDescriptor;
+class UEnemyDescriptor;
 class UMutator;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UEncounterSettings : public UDataAsset {
     GENERATED_BODY()
 public:

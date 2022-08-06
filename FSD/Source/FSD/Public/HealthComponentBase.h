@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "DamageSigDelegate.h"
-#include "Health.h"
 #include "HealthChangedSigDelegate.h"
+#include "Components/ActorComponent.h"
+#include "Health.h"
 #include "HitSigDelegate.h"
-#include "DeathSigDelegate.h"
 #include "BodypartHitSigDelegate.h"
-#include "DamageData.h"
+#include "DamageSigDelegate.h"
+#include "DeathSigDelegate.h"
 #include "OnRadialDamageDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "DamageData.h"
 #include "EHealthbarType.h"
 #include "HealthComponentBase.generated.h"
 
@@ -18,34 +18,34 @@ class UDamageClass;
 class UPrimitiveComponent;
 class UParticleSystem;
 
-UCLASS(Abstract, BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHealthComponentBase : public UActorComponent, public IHealth {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCanTakeDamageDelegate, bool, OutCanTakeDamage);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHealthChangedSig OnHealthChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDamageSig OnDamageHealed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDamageSig OnDamageTaken;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHitSig OnHit;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBodypartHitSig OnBodypartHit;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDeathSig OnDeath;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnRadialDamage OnRadialDamage;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCanTakeDamageDelegate OnCanTakeDamageChanged;
     
 protected:
@@ -110,8 +110,8 @@ public:
     
     
     // Fix for true pure virtual functions not being implemented
-    /*UFUNCTION(BlueprintCallable)*/
-    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);
+    /*UFUNCTION(BlueprintCallable)
+    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);*/
     
     UFUNCTION(BlueprintCallable)
     float GetMaxHealth() const override PURE_VIRTUAL(GetMaxHealth, return 0.0f;);

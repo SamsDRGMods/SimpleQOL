@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "SpawnActorDelegateDelegate.h"
 #include "SpawnActorWithDebrisPosComponent.generated.h"
 
+class UDebrisPositioning;
+class AActor;
 class UCurveFloat;
 class AProceduralSetup;
-class AActor;
-class UDebrisPositioning;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USpawnActorWithDebrisPosComponent : public UActorComponent {
     GENERATED_BODY()
 public:

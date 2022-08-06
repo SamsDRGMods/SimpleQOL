@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBaseComponent.h"
 #include "CSGBakedChildInstanceProperties.h"
+#include "CSGBaseComponent.h"
 #include "CSGBakedChildInstanceComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGBakedChildInstanceComponent : public UCSGBaseComponent {
     GENERATED_BODY()
 public:

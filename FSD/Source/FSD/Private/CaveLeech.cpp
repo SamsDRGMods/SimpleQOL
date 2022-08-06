@@ -1,8 +1,8 @@
 #include "CaveLeech.h"
 #include "Net/UnrealNetwork.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "GrabberComponent.h"
 #include "Components/SceneComponent.h"
+#include "GrabberComponent.h"
 
 class AActor;
 class UHealthComponentBase;

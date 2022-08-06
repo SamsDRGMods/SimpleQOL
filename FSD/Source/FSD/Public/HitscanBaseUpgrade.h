@@ -6,10 +6,10 @@
 #include "UpgradeValues.h"
 #include "HitscanBaseUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UHitscanBaseUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

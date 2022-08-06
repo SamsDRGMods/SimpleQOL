@@ -1,14 +1,14 @@
 #include "PatrolBot.h"
 #include "Net/UnrealNetwork.h"
-#include "HackingUsableComponent.h"
+#include "AvoidCeilingComponent.h"
 #include "Perception/PawnSensingComponent.h"
-#include "Components/SphereComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "HackingUsableComponent.h"
+#include "Components/SphereComponent.h"
 #include "EnemyComponent.h"
 #include "DamageComponent.h"
 #include "PawnAlertComponent.h"
 #include "PlayerImpactCooldownComponent.h"
-#include "AvoidCeilingComponent.h"
 #include "Components/AudioComponent.h"
 #include "ProjectileAttackComponent.h"
 
@@ -78,6 +78,9 @@ void APatrolBot::EndFireRockets() {
 }
 
 void APatrolBot::DisableDrone() {
+}
+
+void APatrolBot::All_SetLaserBeamActive_Implementation(bool Active) {
 }
 
 void APatrolBot::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

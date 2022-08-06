@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "VanityTestCharacterItem.h"
 #include "GameFramework/Character.h"
 #include "EVanitySlot.h"
-#include "VanityTestCharacterItem.h"
 #include "VanityTestCharacter.generated.h"
 
 class USkeletalMesh;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AVanityTestCharacter : public ACharacter {
     GENERATED_BODY()
 public:

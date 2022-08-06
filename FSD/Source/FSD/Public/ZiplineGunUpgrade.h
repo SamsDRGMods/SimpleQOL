@@ -10,7 +10,7 @@ class AZipLineProjectile;
 class AFSDPlayerState;
 class AActor;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UZiplineGunUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

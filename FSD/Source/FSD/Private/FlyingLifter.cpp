@@ -1,8 +1,8 @@
 #include "FlyingLifter.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/PointLightComponent.h"
-#include "GrabberComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "GrabberComponent.h"
+#include "Components/PointLightComponent.h"
 #include "Components/AudioComponent.h"
 #include "InDangerComponent.h"
 

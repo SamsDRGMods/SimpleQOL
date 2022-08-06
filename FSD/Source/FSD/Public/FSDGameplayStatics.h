@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "DecalData.h"
 #include "ScaledEffect.h"
 #include "UObject/NoExportTypes.h"
-#include "DecalData.h"
 #include "FSDGameplayStatics.generated.h"
 
-class UObject;
-class UDecalComponent;
 class UFXSystemComponent;
+class UDecalComponent;
+class UAudioComponent;
+class UObject;
 class AActor;
 class UMaterialInterface;
-class UAudioComponent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDGameplayStatics : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

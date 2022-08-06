@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "SavableActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASavableActor : public AActor {
     GENERATED_BODY()
 public:

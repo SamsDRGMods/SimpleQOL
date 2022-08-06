@@ -5,8 +5,8 @@
 
 class USkeletalMeshComponent;
 class AActor;
-class UHealthComponentBase;
 class AFSDAIController;
+class UHealthComponentBase;
 
 void AFSDPawn::UnFreeze() {
 }
@@ -43,6 +43,10 @@ void AFSDPawn::OnAlerted() {
 void AFSDPawn::MakeRagdollMesh(USkeletalMeshComponent* Mesh) {
 }
 
+
+bool AFSDPawn::IsElite() const {
+    return false;
+}
 
 bool AFSDPawn::GetIsAlerted() const {
     return false;

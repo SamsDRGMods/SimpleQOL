@@ -4,11 +4,11 @@
 #include "EFSDAchievementType.h"
 #include "FSDAchievement.generated.h"
 
+class UFSDAchievement;
 class AFSDPlayerController;
 class UObject;
-class UFSDAchievement;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDAchievement : public USavableDataAsset {
     GENERATED_BODY()
 public:
